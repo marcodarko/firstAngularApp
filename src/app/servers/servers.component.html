@@ -1,0 +1,10 @@
+<app-server *ngFor="let server of myServers; let i = index" ></app-server>
+
+<hr/>
+
+<label>Server Name</label>
+<input type="text" class="form-control" [(ngModel)]="serverName">
+<hr/>
+<button class="btn btn-primary" [disabled]="!allowNewServer" (click)="onCreate()" >Add Server</button>
+<hr/>
+<p *ngIf="created">{{serverCreation}}</p>
